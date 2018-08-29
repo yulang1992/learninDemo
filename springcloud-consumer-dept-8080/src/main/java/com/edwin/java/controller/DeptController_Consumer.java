@@ -19,7 +19,8 @@ import com.edwin.java.entiy.Dept;
 public class DeptController_Consumer {
     
 	//private static final String REST_URL_PREFIX = "http://localhost:8001";
-		private static final String REST_URL_PREFIX = "http://MICROSERVICECLOUD-DEPT";
+	   //微服务的名称
+		private static final String REST_URL_PREFIX = "http://SPRINGCLOUD-PROVIDER-DEPT";
 
 		/**
 		 * 使用 使用restTemplate访问restful接口非常的简单粗暴无脑。 (url, requestMap,
@@ -41,10 +42,10 @@ public class DeptController_Consumer {
 		}
 
 		@SuppressWarnings("unchecked")
-		@RequestMapping(value = "/consumer/dept/list")
+		@RequestMapping(value = "/consumer/dept/findAll")
 		public List<Dept> list()
 		{
-			return restTemplate.getForObject(REST_URL_PREFIX + "/dept/list", List.class);
+			return restTemplate.getForObject(REST_URL_PREFIX + "/dept/findAll", List.class);
 		}
 
 		// 测试@EnableDiscoveryClient,消费端可以调用服务发现
