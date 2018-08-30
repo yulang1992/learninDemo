@@ -98,5 +98,8 @@
 		<module>springcloud-provider-dept-8003</module>
 		<module>springcloud-consumer-dept-feign</module>
 		<module>springcloud-provider-dept-Hystrix-8001</module>
+		<module>springcloud-consumer-hystrix-dashboard</module>
+		<module>springcloud-zuul-gateway-9527</module>
+		<module>springcloud-config-3344</module>
 	</modules>
 </project>
